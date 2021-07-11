@@ -43,7 +43,7 @@
 					<br>
 					<div class="btn1">
 						비밀번호를 잊으셨습니까? <input id="put2" type="button" value="비밀번호 찾기"
-							onclick="location.href='FindPw.jsp'">
+							onclick="location.href='${pageContext.request.contextPath }/FindPw.do'">
 					</div></td>
 			</tr>
 		</table>

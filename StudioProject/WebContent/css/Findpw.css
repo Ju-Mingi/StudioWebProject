@@ -1,0 +1,26 @@
+.div1 {
+border: 1px solid none; 
+display: inline-block;
+
+width:500px;
+    height:500px;
+    position:absolute;
+    left:600px;
+    top:300px;
+}
+    
+font{
+text-align:center;
+width:300px;
+    height:300px;
+    position:absolute;
+    left:600px;
+    top:250px;
+ color: blue;
+font-size: 20px;
+}
+
+
+.ans {
+	border: #888888 1px solid !important;
+}

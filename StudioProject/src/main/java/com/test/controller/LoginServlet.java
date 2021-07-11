@@ -31,7 +31,9 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String url = "member/loginForm.jsp";
+		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -54,7 +56,7 @@ public class LoginServlet extends HttpServlet {
 			member = mDao.getUser(id);
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", member); // getUser 메소드를 사용하여 DB에서 가져온 유저 정보
-			url = "main.jsp";
+			url = "index.jsp";
 			break;
 		
 		case 0:
@@ -68,8 +70,12 @@ public class LoginServlet extends HttpServlet {
 			break;
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-		dispatcher.forward(request, response);
+		if(url == "index.jsp")
+			response.sendRedirect(url);
+		else {
+			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+			dispatcher.forward(request, response);
+		}
 	}
 
 }
