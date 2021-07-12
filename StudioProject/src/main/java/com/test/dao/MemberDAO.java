@@ -133,6 +133,7 @@ public class MemberDAO {
 		}
 		return mVo;
 	}
+	
 
 	// 회원 정보 추가 메소드
 	public int insertMember(MemberVO mVo) {
@@ -255,6 +256,41 @@ public class MemberDAO {
 		}
 		return pw;
 
+	}
+	
+	public int updateMember(MemberVO mVo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = -1;
+
+		String sql = "update member set cust_pw = ?, cust_email = ?, cust_phone = ? where cust_id = ?";
+
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mVo.getPassword());
+			pstmt.setString(2, mVo.getEmail());
+			pstmt.setString(3, mVo.getPhone());
+			pstmt.setString(4, mVo.getId());
+
+			result = pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (conn != null) {
+					conn.close();
+				}
+				if (pstmt != null) {
+					pstmt.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		return result;
 	}
 
 }

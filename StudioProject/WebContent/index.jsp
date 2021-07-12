@@ -31,8 +31,8 @@ ul.imgs li {
 	margin: 0;
 }
 
-#first_img{
-	margin:0;
+#first_img {
+	margin: 0;
 }
 </style>
 <title>Insert title here</title>
@@ -46,7 +46,7 @@ ul.imgs li {
 
 			<ul id="imgholder" class="imgs">
 				<li><a href="#"><img id="first_img"
-						src="${pageContext.request.contextPath}/images/LostArk_PC_BG_Mokoko_01.png"
+						src="${pageContext.request.contextPath}/img/bani.jpg"
 						width="1000px" height="500px"> </a></li>
 			</ul>
 
@@ -69,9 +69,9 @@ ul.imgs li {
 
 				if (rs.next() == false)
 			break;
-				out.println("<a href='detailpage.jsp?enter_num="+rs.getString("enter_num")+"'>");
+				out.println("<a href='detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
 				out.println(
-				"<div class='banner' style='width:1000px; height:300px; border:1px solid black; display: block; margin-top:20px; margin-right:90px;'>");
+				"<div class='banner' style='width:1000px; height:300px; border:1px solid black; display: block; margin-top:20px; padding-top:10px; margin-right:90px;'>");
 				//try{
 				String imgpath = ".\\uploadimg\\";
 				out.println("<ul class='imgs'>");
@@ -80,16 +80,16 @@ ul.imgs li {
 				out.println("<tr>");
 				out.println("<td rowspan='4'><img src='" + imgpath + rs.getString("studio_img")
 				+ "' width='450px' height='300px'/></td>");
-				out.println("<td><h3>" + rs.getString("studio_name") + "</h3></td>");
+				out.println("<td style=\"padding-left:100px;\"><h3>" + rs.getString("studio_name") + "</h3></td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td>" + rs.getString("studio_address") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_address") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td>" + rs.getString("studio_phone") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_phone") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td>" + rs.getString("product1_name") + rs.getString("product1_price") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + rs.getString("product1_price") + "</td>");
 				out.println("</tr>");
 				out.println("</table>");
 				out.println("</li>");
@@ -103,9 +103,12 @@ ul.imgs li {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (rs != null)	rs.close();
-				if (pstmt != null)pstmt.close();
-				if (conn != null)conn.close();
+				if (rs != null)
+			rs.close();
+				if (pstmt != null)
+			pstmt.close();
+				if (conn != null)
+			conn.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -116,7 +119,5 @@ ul.imgs li {
 
 
 	</div>
-	<div id="footer" style="position: absolute; margin-top: 350px;">
-		footer</div>
 </body>
 </html>

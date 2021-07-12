@@ -143,6 +143,8 @@ function joinCheck() {
 		return false;
 	}
 	
+	alert('완료 되었습니다.');
+	
 
 	return true;
 }

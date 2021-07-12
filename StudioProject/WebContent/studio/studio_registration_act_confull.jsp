@@ -25,7 +25,7 @@
 <body>
 	<%
 //request.setCharacterEncoding("UTF-8");
-String savepath = request.getServletContext().getRealPath("uploadimg"); // 파일 업로드 위치
+String savepath = getServletContext().getRealPath("uploadimg"); // 파일 업로드 위치
 int sizelimit = 1024*1024*15;
 
 MultipartRequest multi = new MultipartRequest(request, savepath, sizelimit, "UTF-8", new DefaultFileRenamePolicy());

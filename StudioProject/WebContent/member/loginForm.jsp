@@ -6,8 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 페이지</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css">
-<script type="text/javascript" src="${pageContext.request.contextPath}/script/join.js"></script>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/login.css">
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/script/join.js"></script>
+<script type="text/javascript">
+	window.history.forward(1);
+</script>
 </head>
 <body>
 	<form name="login_Form"
@@ -32,13 +37,11 @@
 			<tr>
 				<td colspan="3" align=center><br>
 					<div>
-						<div style="text-align: center; color: red;">
-							${message}
-						</div>
-						<br>
-						<input class="btn hover1" type="submit"
+						<div style="text-align: center; color: red;">${message}</div>
+						<br> <input class="btn hover1" type="submit"
 							onclick="return loginCheck()" value="로그인">
-					</div><input class="btn hover3" type="button" value="회원가입"
+					</div>
+					<input class="btn hover3" type="button" value="회원가입"
 					onclick="location.href='${pageContext.request.contextPath }/join.do'">
 					<br>
 					<div class="btn1">

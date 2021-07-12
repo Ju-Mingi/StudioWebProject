@@ -31,11 +31,6 @@ public class MemberUpdateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String userId = request.getParameter("id");
-		MemberDAO mDao = MemberDAO.getInstance();
-		MemberVO mVo = mDao.getUser(userId);
-		request.setAttribute("mVo", mVo);
-		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("member/memberUpdate.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -45,7 +40,22 @@ public class MemberUpdateServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+			request.setCharacterEncoding("UTF-8");      // 한글 깨짐 방지
+	      
+	      String userid = request.getParameter("id");
+	      String pwd = request.getParameter("password");
+	      String email = request.getParameter("email");
+	      String phone = request.getParameter("phone");
+	      
+	      MemberVO mVo = new MemberVO();
+	      mVo.setId(userid);
+	      mVo.setPassword(pwd);
+	      mVo.setEmail(email);
+	      mVo.setPhone(phone);
+	      
+	      MemberDAO mdao = MemberDAO.getInstance();
+	      mdao.updateMember(mVo);
+	      response.sendRedirect("login.do");
 	}
 
 }
