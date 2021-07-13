@@ -20,7 +20,7 @@
 					<td id="title">아이디</td>
 					<td><input type="text" id="id" name="id" maxlength="12"
 						pattern="[a-z0-9]{4,12}"><input type="hidden" name="reid"> <input type="button"
-						value="중복확인" onclick="return idCheck()" /> <font size="1px">아이디
+						value="중복확인" onclick="return idCheck()"/><font size="1px">아이디
 							입력 전에 먼저 중복확인을 완료해주세요!</font></td>
 				</tr>
 

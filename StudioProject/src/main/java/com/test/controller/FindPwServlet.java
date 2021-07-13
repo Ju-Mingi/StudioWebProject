@@ -64,9 +64,9 @@ public class FindPwServlet extends HttpServlet {
 	
 		out.println("<script>");
 		out.println("alert('비밀번호는 "+result+"');");
-		out.println("history.go(-2);");
 		//out.println("location.href'member/loginForm.jsp';");
 		out.println("</script>");
+		response.sendRedirect("login.do");
 			
 		
 		//request.getRequestDispatcher("member/loginForm.jsp").forward(request, response);

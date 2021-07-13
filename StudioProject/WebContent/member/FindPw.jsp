@@ -36,6 +36,7 @@
                      </div>
    &nbsp;&nbsp;&nbsp;&nbsp;답: <input type="text" name ="answer" style="border: 1px" class="ans">
    <input type="submit" name="answer1" value="확인"  >
+   <input type="button" value ="홈" onclick="location.href='/StudioProject/login.do'">
    
  
    </form>
