@@ -55,7 +55,7 @@ padding: 10px;
 <div style="overflow:auto;">
 </div>
 <div id="container" style="margin-top: 50px;">
-<div class="banner_main" style="border:1px solid black; margin-top:10px">
+<div class="banner_main" style="border:10px solid rgb(211,211,255); margin-top:10px">
 	<form action="search_act.jsp" method="post">
 		<table id="searchbox">
 			<tr>
@@ -92,7 +92,7 @@ padding: 10px;
 	</form>
 </div>
 <div id="contents" style="height: 100%; width:80%">
-	<div class="sub_banner" style="position:absolute; width:1000px; margin-left:-500px; left:50%;">
+	<div class="sub_banner" style="position:absolute; width:1000px; margin-left:-510px; left:50%; ">
 		
 	<%
 		String sql = "select * from studio";
@@ -109,7 +109,7 @@ padding: 10px;
 			break;
 				out.println("<a href='detailpage.jsp?ent_num="+rs.getString("ent_num")+"'>");
 				out.println(
-				"<div class='banner' style='width:1000px; height:300px; border:1px solid black; display: block; margin-top:20px; padding-top:10px; margin-right:90px;'>");
+				"<div class='banner' style='width:1000px; height:300px; border:10px solid rgb(211,211,255); border-radius:10px; display: block; margin-top:20px; padding-top:10px; padding-bottom:5px; margin-right:90px;'>");
 				//try{
 				String imgpath = "..\\uploadimg\\";
 				out.println("<ul class='imgs'>");
@@ -127,7 +127,7 @@ padding: 10px;
 				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_phone") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + rs.getString("product1_price") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") +" "+ rs.getString("product1_price") + "</td>");
 				out.println("</tr>");
 				out.println("</table>");
 				out.println("</li>");

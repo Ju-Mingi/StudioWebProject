@@ -42,11 +42,11 @@ ul.imgs li {
 	<div style="overflow: auto;"></div>
 	<div id="container" style="margin-top: 50px;">
 		<div class="banner_main"
-			style="border: 1px solid black; margin-top: 10px">
+			style="border: 20px solid rgb(211,211,255); border-radius:10px; margin-top: 10px">
 
 			<ul id="imgholder" class="imgs">
 				<li><a href="#"><img id="first_img"
-						src="${pageContext.request.contextPath}/img/bani.jpg"
+						src="${pageContext.request.contextPath}/img/rolands-zilvinskis-cPxRBHechRc-unsplash.jpg"
 						width="1000px" height="500px"> </a></li>
 			</ul>
 
@@ -55,7 +55,7 @@ ul.imgs li {
 
 	</div>
 	<div class="sub_banner"
-		style="position: absolute; width: 1000px; margin-left: -500px; left: 50%;">
+		style="position: absolute; width: 1000px; margin-left: -520px; left: 50%;">
 		<%
 		String sql = "select * from studio";
 		Context initContext = new InitialContext();
@@ -71,7 +71,7 @@ ul.imgs li {
 			break;
 				out.println("<a href='detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
 				out.println(
-				"<div class='banner' style='width:1000px; height:300px; border:1px solid black; display: block; margin-top:20px; padding-top:10px; margin-right:90px;'>");
+				"<div class='banner' style='width:1000px; border-radius:10px; height:300px; border:20px solid rgb(211,211,255); display: block; margin-top:20px; padding-top:10px; padding-bottom:5px; margin-right:90px;'>");
 				//try{
 				String imgpath = ".\\uploadimg\\";
 				out.println("<ul class='imgs'>");
@@ -89,7 +89,7 @@ ul.imgs li {
 				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_phone") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + rs.getString("product1_price") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") +" "+ rs.getString("product1_price") + "</td>");
 				out.println("</tr>");
 				out.println("</table>");
 				out.println("</li>");

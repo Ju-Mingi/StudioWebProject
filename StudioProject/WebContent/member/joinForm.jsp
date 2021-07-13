@@ -5,23 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>IWPERSON 회원가입</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/join.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/join.css">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/script/join.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/script/join.js"></script>
 
 </head>
 <body>
+	<%@ include file="/header/header.jsp"%>
 	<div class="container">
-		<form name="join_Form" class="join_form" action="${pageContext.request.contextPath }/join.do"
-			method="post">
+		<form name="join_Form" class="join_form"
+			action="${pageContext.request.contextPath }/join.do" method="post">
 			<div class="form_title" id="form_title">회원가입</div>
 			<table id="table">
 				<tr>
 					<td id="title">아이디</td>
 					<td><input type="text" id="id" name="id" maxlength="12"
-						pattern="[a-z0-9]{4,12}"><input type="hidden" name="reid"> <input type="button"
-						value="중복확인" onclick="return idCheck()"/><font size="1px">아이디
-							입력 전에 먼저 중복확인을 완료해주세요!</font></td>
+						pattern="[a-z0-9]{4,12}"><input type="hidden" name="reid">
+						<input type="button" value="중복확인" onclick="return idCheck()" /><font
+						size="1px">아이디 입력 전에 먼저 중복확인을 완료해주세요!</font></td>
 				</tr>
 
 				<tr>
@@ -151,7 +154,8 @@
 					</tr>
 				</table>
 			</div>
-			<input id="signup_button" type="submit" value="회원가입" onclick="return joinCheck()" />
+			<input id="signup_button" type="submit" value="회원가입"
+				onclick="return joinCheck()" />
 		</form>
 	</div>
 	<br>

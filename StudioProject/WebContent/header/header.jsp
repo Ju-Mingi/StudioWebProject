@@ -70,7 +70,7 @@ nav li {
 					out.println("<li><a href = \"/StudioProject/logout.do\">로그아웃</a></li>");
 				}
 				%>
-				<li>반가워요! ${loginUser.name}(${loginUser.id })님</li>
+				<li>반가워요! ${loginUser.name}</li>
 			</ul>
 		</nav>
 	</header>
