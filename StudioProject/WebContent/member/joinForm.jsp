@@ -29,7 +29,7 @@
 
 				<tr>
 					<td id="title">비밀번호</td>
-					<td><input type="password" id="pw" name="pw" maxlength="16"
+					<td><input type="password" id="pw" name="pw" maxlength="12"
 						pattern="[a-zA-Z0-9!@#$%^&*]{4,12}" /> <font size="2px">4~12자리(영어(대소문자),
 							숫자, 특수문자만 허용)</font></td>
 				</tr>
@@ -37,7 +37,7 @@
 				<tr>
 					<td id="title">비밀번호 확인</td>
 					<td><input type="password" id="pw_check" name="pw_check"
-						maxlength="16" pattern="[a-zA-Z0-9!@#$%^&*]{4,12}" /> <font
+						maxlength="12" pattern="[a-zA-Z0-9!@#$%^&*]{4,12}" /> <font
 						size="2px">4~12자리(영어(대소문자), 숫자, 특수문자만 허용)</font> <!-- 비밀번호와 비밀번호 확인이 일치하지 않으면 경고문이 출력되고 맞게 입력했으면 경고문이 사라지거나
                         일치합니다 라는 문구가 출력되게 해야한다. --></td>
 				</tr>

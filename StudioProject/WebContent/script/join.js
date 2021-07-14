@@ -56,10 +56,6 @@ $(function() {
 	});
 });
 
-function IdCheck() {
-	window.open("IdCheck_window.jsp", "IdCheck_window",
-		"width=400, height=300");
-}
 
 function loginCheck() {
 	if (document.login_Form.id.value == "") {
