@@ -69,7 +69,7 @@ ul.imgs li {
 
 				if (rs.next() == false)
 			break;
-				out.println("<a href='detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
+				out.println("<a href='studio/detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
 				out.println(
 				"<div class='banner' style='width:1000px; border-radius:10px; height:300px; border:20px solid rgb(211,211,255); display: block; margin-top:20px; padding-top:10px; padding-bottom:5px; margin-right:90px;'>");
 				//try{
