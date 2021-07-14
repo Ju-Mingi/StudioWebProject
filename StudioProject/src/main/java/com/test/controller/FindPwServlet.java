@@ -56,20 +56,11 @@ public class FindPwServlet extends HttpServlet {
 		String result = mDao.FindPw(id, question, answer);
 		
 		PrintWriter out =response.getWriter();
-		
-		//db접근하여 인스턴스 값을 얻습니다.
-		//MemberDAO mDao =MemberDAO.getInstance();
-		
-		//세로운 객채를 생성 초기화 단게라고 생각하면 편함.
 	
 		out.println("<script>");
 		out.println("alert('비밀번호는 "+result+"');");
-		//out.println("location.href'member/loginForm.jsp';");
+		out.println("location.href ='member/loginForm.jsp';");
 		out.println("</script>");
-		response.sendRedirect("login.do");
-			
-		
-		//request.getRequestDispatcher("member/loginForm.jsp").forward(request, response);
 	}
 
 }
