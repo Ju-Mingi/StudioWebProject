@@ -5,8 +5,8 @@ display: inline-block;
 width:500px;
     height:500px;
     position:absolute;
-    left:600px;
-    top:300px;
+    left:40%;
+    top:50%;
 }
     
 font{
@@ -14,8 +14,8 @@ text-align:center;
 width:300px;
     height:300px;
     position:absolute;
-    left:600px;
-    top:250px;
+    left:0;
+    top:-10%;
  color: rgb(211, 211, 255);
 font-size: 20px;
 }
