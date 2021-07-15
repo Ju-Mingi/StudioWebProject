@@ -54,7 +54,7 @@
 
 				<tr>
 					<td id="title">성별</td>
-					<td><input type="radio" name="gender" value="남" />남
+					<td><input type="radio" name="gender" value="남" checked="checked"/>남
 						&nbsp;&nbsp;&nbsp; <input type="radio" name="gender" value="여" />여</td>
 				</tr>
 

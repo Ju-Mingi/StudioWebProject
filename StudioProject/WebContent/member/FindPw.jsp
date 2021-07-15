@@ -11,9 +11,9 @@
 
 <body>
 
-<font>비밀번호 찾기</font>
-<div class="div1">
 
+<div class="div1">
+<font>비밀번호 찾기</font>
   <form  name="log"action = "${pageContext.request.contextPath }/FindPw.do" method="post" >
   
 
