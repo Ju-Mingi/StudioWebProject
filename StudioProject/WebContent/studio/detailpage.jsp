@@ -164,7 +164,7 @@ button:hover {
 
 	<div id="main">
 		<div class="much">
-			<img src="<%out.print("/uploadimg/");%><%out.print(studio_img);%>"
+			<img src="<%out.print("../uploadimg/");%><%out.print(studio_img);%>"
 				alt="샘플이미지">
 		</div>
 		<div class="introduce">
