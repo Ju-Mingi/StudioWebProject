@@ -1,6 +1,7 @@
+<%@page import="com.test.dto.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import = "com.test.dao.MemberDAO" %>
+<%@ page import="com.test.dao.MemberDAO"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,9 @@
 <title>Insert title here</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap"
+	rel="stylesheet">
 <style>
 * {
 	font-family: 'Noto Sans KR', sans-serif;
@@ -18,7 +21,7 @@
 
 a {
 	text-decoration: none;
-	font-weight:bold;
+	font-weight: bold;
 	color: black;
 }
 
@@ -48,7 +51,7 @@ nav li {
 </head>
 <body>
 	<%
-	Object userCheck = session.getAttribute("loginUser");
+	MemberVO userCheck = (MemberVO) session.getAttribute("loginUser");
 	/* String userdata = String.valueOf(id); //Object 를 String 으로 받는 법
 	out.println(userdata); */
 	%>
@@ -64,13 +67,18 @@ nav li {
 				if (userCheck == null) {
 					out.println("<li><a href = \"/StudioProject/join.do\">회원가입</a></li>");
 					out.println("<li><a href = \"/StudioProject/login.do\">로그인</a></li>");
-				}else{
-					out.println("<li><a href=\"/StudioProject/studio/studio_registration.jsp\" onclick=\"alert('사업자 회원만 등록 가능합니다.')\">사진관 등록</a></li>");
+					out.println("<li>반가워요! 게스트님</li>");
+				} else {
+					if (userCheck.getEnt_num() != null) {
+						out.println(
+						"<li><a href=\"/StudioProject/studio/studio_registration.jsp\" onclick=\"alert('사업자 회원만 등록 가능합니다.')\">사진관 등록</a></li>");
+					}
 					out.println("<li><a href = \"/StudioProject/memberUpdate.do\">마이페이지</a></li>");
 					out.println("<li><a href = \"/StudioProject/logout.do\">로그아웃</a></li>");
+					out.println("<li>반가워요! "+userCheck.getName()+"님</li>");
 				}
 				%>
-				<li>반가워요! ${loginUser.name}</li>
+				
 			</ul>
 		</nav>
 	</header>

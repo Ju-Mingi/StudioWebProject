@@ -80,7 +80,7 @@ ul.imgs li {
 				out.println("<tr>");
 				out.println("<td rowspan='4'><img src='" + imgpath + rs.getString("studio_img")
 				+ "' width='450px' height='300px'/></td>");
-				out.println("<td style=\"padding-left:100px;\"><h3>" + rs.getString("studio_name") + "</h3></td>");
+				out.println("<td style=\"padding-left:100px;\"><h2>" + rs.getString("studio_name") + "</h2></td>");
 				out.println("</tr>");
 				out.println("<tr>");
 				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_address") + "</td>");
@@ -89,7 +89,7 @@ ul.imgs li {
 				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_phone") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + " "
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + " - "
 				+ rs.getString("product1_price") + "</td>");
 				out.println("</tr>");
 				out.println("</table>");

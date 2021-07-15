@@ -8,11 +8,7 @@
 <%!
 //선언부는 첫 방문자에 의해서 단 한번 수행합니다.
 	Connection conn = null;
-	// Statement stmt = null;
 	ResultSet rs = null;
-	String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-	String uid = "test_user";
-	String pwd = "minky";
 	String sql = null;
 	PreparedStatement stmt = null;
 %>

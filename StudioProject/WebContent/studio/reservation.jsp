@@ -26,7 +26,7 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 	<div class="container">
 
 
-		<form name="reserv_form" class="login_form" action="reservProcess.jsp"
+		<form name="reserv_form" class="reserv_form" action="reservProcess.jsp"
 			method="post">
 			<div id="form_title" ; style="float: left; height: 20px">예약</div>
 			<br>
@@ -38,22 +38,22 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 				<!-- today의 값을 가져오기 위한 객체 -->
 
 			</div>
-
 			<br>
-			<div style="width: 100%; height: 200px; background: rgb(211, 211, 255);">
-				<div style="display: inline; float: left;" class="time_check">
+			<br>
+			<hr>
+			<div style="height: 200px;">
+				<div style="float: left;" class="time_check">
 					<label for="check1"><span></span>10:00 ~ 12:00</label> <input
 						type="radio" id="check1" name="check" />
-					<p><br>
+					<br><br>
 
 						<label for="check2"><span></span>12:00 ~ 14:00</label> <input
 							type="radio" id="check2" name="check" />
-					<p><br>
+					<br><br>
 
 						<label for="check3">14:00 ~ 16:00<span></span></label> <input
 							type="radio" id="check3" name="check" />
-					<p><br>
-
+					<br><br>
 						<label for="check4"><span></span>16:00 ~ 18:00</label> <input
 							type="radio" id="check4" name="check" />
 				</div>
@@ -63,7 +63,9 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 			※코로나 거리두기 4단계 격상으로 인해 18:00까지만 운영됩니다. <br>
 
 			<div id="form_title" style="float: left; height: 20px;">예약자 정보</div>
-			<br> <br>
+			<br>
+			<br>
+			<br>
 			<hr>
 
 			<table>
@@ -72,6 +74,7 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 					<td><input type="text" id="reserv_name" name="reserv_name"
 						maxlength="10" /></td>
 				</tr>
+				<br>
 				<tr>
 					<td id="title">연락처</td>
 					<td><input id="reserv_phone" type="text" size="3"
@@ -85,8 +88,11 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 			</table>
 			<br> <br>
 			<div id="form_title" style="float: left; height: 20px">결제 금액</div>
-			<br> <br>
+			<br>
+			<br>
+			<br>
 			<hr>
+			<br>
 			<table>
 				<tr>
 					<td style="text-align: center; width: 200px;">상품 금액</td>

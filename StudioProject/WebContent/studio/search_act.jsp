@@ -87,25 +87,25 @@ padding: 10px;
 				}
 				out.println("<a href='detailpage.jsp?ent_num="+rs.getString("ent_num")+"'>");
 				out.println(
-				"<div class='banner' style='width:1000px; height:300px; border:1px solid black; display: block; margin-top:20px; margin-right:90px;'>");
+				"<div class='banner' style='width:1000px; border-radius:10px; height:300px; border:20px solid rgb(211,211,255); display: block; margin-top:20px; padding-top:10px; padding-bottom:5px; margin-right:90px;'>");
 				try{
-					String imgpath = ".\\uploadimg\\";
+					String imgpath = "..\\uploadimg\\";
 					out.println("<ul class='imgs'>");
 					out.println("<li>");
 					out.println("<table>");
 					out.println("<tr>");
 					out.println("<td rowspan='4'><img src='" + imgpath + rs.getString("studio_img")
 					+ "' width='450px' height='300px'/></td>");
-					out.println("<td><h3>" + rs.getString("studio_name") + "</h3></td>");
+					out.println("<td style='padding-left:100px;'><h2>" + rs.getString("studio_name") + "</h2></td>");
 					out.println("</tr>");
 					out.println("<tr>");
-					out.println("<td>" + rs.getString("studio_address") + "</td>");
+					out.println("<td style='padding-left:100px;'>" + rs.getString("studio_address") + "</td>");
 					out.println("</tr>");
 					out.println("<tr>");
-					out.println("<td>" + rs.getString("studio_phone") + "</td>");
+					out.println("<td style='padding-left:100px;'>" + rs.getString("studio_phone") + "</td>");
 					out.println("</tr>");
 					out.println("<tr>");
-					out.println("<td>" + rs.getString("product1_name") + rs.getString("product1_price") + "</td>");
+					out.println("<td style='padding-left:100px;'>" + rs.getString("product1_name") +" - "+ rs.getString("product1_price") + "</td>");
 					out.println("</tr>");
 					out.println("</table>");
 					out.println("</li>");
@@ -129,9 +129,6 @@ padding: 10px;
 		%>
 
 	</div>
-</div>
-<div id="footer" style="position:absolute; margin-top:350px;">
-footer
 </div>
 </body>
 </html>

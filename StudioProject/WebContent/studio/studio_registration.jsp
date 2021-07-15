@@ -58,15 +58,12 @@ input {
 			<table>
 				<tr>
 					<th>사진관 이름</th>
-					<td><input type="text" name="studio_name"></td>
+					<td><input type="text" value="${loginUser.ent_name }" name="studio_name"></td>
 				</tr>
 
 				<tr>
 					<th>사업자 번호</th>
-					<td><input style="width: 48px;" type="text" name="ent_num"
-						value=""> - <input style="width: 32px;" type="text"
-						name="ent_num" value=""> - <input style="width: 55px;"
-						type="text" name="ent_num" value=""></td>
+					<td><input type="text"  name="ent_num" value="${loginUser.ent_num }" style="width:25%"></td>
 				</tr>
 
 				<tr>
@@ -80,7 +77,7 @@ input {
 
 				<tr>
 					<th>주소</th>
-					<td><input type="text" style="width: 50%;"
+					<td><input type="text" style="width: 110%;"
 						name="studio_address"></td>
 				</tr>
 
