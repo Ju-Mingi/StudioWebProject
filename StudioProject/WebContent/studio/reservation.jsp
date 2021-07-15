@@ -44,21 +44,22 @@ String Date = new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.
 				<div style="display: inline; float: left;" class="time_check">
 					<label for="check1"><span></span>10:00 ~ 12:00</label> <input
 						type="radio" id="check1" name="check" />
-					<p>
+					<p><br>
 
 						<label for="check2"><span></span>12:00 ~ 14:00</label> <input
 							type="radio" id="check2" name="check" />
-					<p>
+					<p><br>
 
 						<label for="check3">14:00 ~ 16:00<span></span></label> <input
 							type="radio" id="check3" name="check" />
-					<p>
+					<p><br>
 
 						<label for="check4"><span></span>16:00 ~ 18:00</label> <input
 							type="radio" id="check4" name="check" />
 				</div>
 
 			</div>
+			<br>
 			※코로나 거리두기 4단계 격상으로 인해 18:00까지만 운영됩니다. <br>
 
 			<div id="form_title" style="float: left; height: 20px;">예약자 정보</div>

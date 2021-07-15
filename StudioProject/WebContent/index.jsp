@@ -42,7 +42,7 @@ ul.imgs li {
 	<div style="overflow: auto;"></div>
 	<div id="container" style="margin-top: 50px;">
 		<div class="banner_main"
-			style="border: 20px solid rgb(211,211,255); border-radius:10px; margin-top: 10px">
+			style="border: 20px solid rgb(211, 211, 255); border-radius: 10px; margin-top: 10px">
 
 			<ul id="imgholder" class="imgs">
 				<li><a href="#"><img id="first_img"
@@ -69,7 +69,7 @@ ul.imgs li {
 
 				if (rs.next() == false)
 			break;
-				out.println("<a href='detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
+				out.println("<a href='studio/detailpage.jsp?ent_num=" + rs.getString("ent_num") + "'>");
 				out.println(
 				"<div class='banner' style='width:1000px; border-radius:10px; height:300px; border:20px solid rgb(211,211,255); display: block; margin-top:20px; padding-top:10px; padding-bottom:5px; margin-right:90px;'>");
 				//try{
@@ -89,7 +89,8 @@ ul.imgs li {
 				out.println("<td style=\"padding-left:100px;\">" + rs.getString("studio_phone") + "</td>");
 				out.println("</tr>");
 				out.println("<tr>");
-				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") +" "+ rs.getString("product1_price") + "</td>");
+				out.println("<td style=\"padding-left:100px;\">" + rs.getString("product1_name") + " "
+				+ rs.getString("product1_price") + "</td>");
 				out.println("</tr>");
 				out.println("</table>");
 				out.println("</li>");

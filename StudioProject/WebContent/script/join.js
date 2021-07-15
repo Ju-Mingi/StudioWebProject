@@ -10,7 +10,7 @@ $(function show_hide_enter_option() {
 	});
 });
 
-$(function() {
+$(function pwNotice() {
 	$('#pw').keyup(function() {
 		if ($('#pw').val().length < 4) {
 			$('#chkNotice').html('비밀번호는 4자리 이상 12자리 이하로 설정해주세요.');
